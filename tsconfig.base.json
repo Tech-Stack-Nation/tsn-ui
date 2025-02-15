@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@tsn-ui/atoms": ["libs/tsn-ui/tsn-atoms/src/index.ts"],
+      "@tsn-ui/forms": ["libs/tsn-ui/tsn-forms/src/index.ts"],
+      "@tsn-ui/molecules": ["libs/tsn-ui/tsn-molecules/src/index.ts"],
+      "@tsn-ui/organism": ["libs/tsn-ui/tsn-organism/src/index.ts"],
+      "@tsn-ui/shared": ["libs/tsn-ui/tsn-shared/src/index.ts"],
+      "@tsn-ui/templates": ["libs/tsn-ui/tsn-templates/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
