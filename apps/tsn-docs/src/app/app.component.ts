@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { TsnButton } from '@tsn-ui/atoms/button';
 
 @Component({
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [TsnButton, RouterModule],
   selector: 'tsn-docs-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
