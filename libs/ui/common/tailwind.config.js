@@ -1,14 +1,150 @@
-const { createGlobPatternsForDependencies } = require('@nx/angular/tailwind');
-const { join } = require('path');
-
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    join(__dirname, 'src/**/!(*.stories|*.spec).{ts,html}'),
-    ...createGlobPatternsForDependencies(__dirname),
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
+    theme: {
+      colors: {
+        blue: {
+          light: '#85d7ff',
+          DEFAULT: '#1fb6ff',
+          dark: '#009eeb',
+        },
+        pink: {
+          light: '#ff7ce5',
+          DEFAULT: '#ff49db',
+          dark: '#ff16d1',
+        },
+        gray: {
+          darkest: '#1f2d3d',
+          dark: '#3c4858',
+          DEFAULT: '#c0ccda',
+          light: '#e0e6ed',
+          lightest: '#f9fafc',
+        }
+      },
+      darkMode: 'tsn-dark',
+      extend: {
+        colors: {
+            primary: {
+              50: '#e6e7eb',
+              100: '#cccfd8',
+              200: '#b3b7c4',
+              300: '#999fb1',
+              400: '#80879d',
+              500: '#666f8a',
+              600: '#4d5776',
+              700: '#333f63',
+              800: '#1a274f',
+              900: '#001659',
+            },
+            secondary: {
+              50: '#fff2ec',
+              100: '#ffe5d9',
+              200: '#ffd7c6',
+              300: '#ffc9b3',
+              400: '#ffbba0',
+              500: '#ffad8d',
+              600: '#ff9f7a',
+              700: '#ff9167',
+              800: '#ff8354',
+              900: '#ff5e14',
+            },
+            danger: {
+              50: '#fef2f2',
+              100: '#fee2e2',
+              200: '#fecaca',
+              300: '#fca5a5',
+              400: '#f87171',
+              500: '#ef4444',
+              600: '#dc2626',
+              700: '#b91c1c',
+              800: '#991b1b',
+              900: '#7f1d1d',
+            },
+            success: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+            },
+            warning: {
+              50: '#fefce8',
+              100: '#fef9c3',
+              200: '#fef08a',
+              300: '#fde047',
+              400: '#facc15',
+              500: '#eab308',
+              600: '#ca8a04',
+              700: '#a16207',
+              800: '#854d0e',
+              900: '#713f12',
+            },
+            info: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            gray: {
+              50: '#f9fafb',
+              100: '#f3f4f6',
+              200: '#e5e7eb',
+              300: '#d1d5db',
+              400: '#9ca3af',
+              500: '#6b7280',
+              600: '#4b5563',
+              700: '#374151',
+              800: '#1f2937',
+              900: '#111827',
+            }
+          },
+      },
+    },
+    safelist: [
+        // Primary colors
+        { pattern: /^bg-primary-/ },
+        { pattern: /^text-primary-/ },
+        { pattern: /^border-primary-/ },
+        { pattern: /^ring-primary-/ },
+        // Secondary colors
+        { pattern: /^bg-secondary-/ },
+        { pattern: /^text-secondary-/ },
+        { pattern: /^border-secondary-/ },
+        { pattern: /^ring-secondary-/ },
+        // Danger colors
+        { pattern: /^bg-danger-/ },
+        { pattern: /^text-danger-/ },
+        { pattern: /^border-danger-/ },
+        { pattern: /^ring-danger-/ },
+        // Success colors
+        { pattern: /^bg-success-/ },
+        { pattern: /^text-success-/ },
+        { pattern: /^border-success-/ },
+        { pattern: /^ring-success-/ },
+        // Warning colors
+        { pattern: /^bg-warning-/ },
+        { pattern: /^text-warning-/ },
+        { pattern: /^border-warning-/ },
+        { pattern: /^ring-warning-/ },
+        // Info colors
+        { pattern: /^bg-info-/ },
+        { pattern: /^text-info-/ },
+        { pattern: /^border-info-/ },
+        { pattern: /^ring-info-/ },
+        // Gray colors
+        { pattern: /^bg-gray-/ },
+        { pattern: /^text-gray-/ },
+        { pattern: /^border-gray-/ },
+        { pattern: /^ring-gray-/ },
+      ],
+    plugins: [],
+  }
